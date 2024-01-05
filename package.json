@@ -1,0 +1,20 @@
+{
+  "name": "webflow-escadrille",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:index": "esbuild src/index.js --bundle --minify --outfile=dist/index.js --watch",
+    "build:b2b": "esbuild src/b2b.js --bundle --minify --outfile=dist/b2b.js --watch",
+    "build:dash": "esbuild src/dashboard.js --bundle --minify --outfile=dist/dashboard.js --watch",
+    "build:entreprise": "esbuild src/entreprise.js --bundle --minify --outfile=dist/entreprise.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.19.11",
+    "gsap": "^3.12.4"
+  }
+}

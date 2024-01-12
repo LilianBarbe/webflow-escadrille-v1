@@ -23,3 +23,22 @@ btnShowMore.addEventListener("click", function (btn) {
 tippy("[data-tippy-content]", {
   theme: "dark",
 });
+
+// MODAL COQUILLE
+const btnCoquille = document.querySelector(".btn_coquille--fs7-2");
+const modalCoquille = document.querySelector("[modal-coq]");
+const modalOverlay = document.querySelector(".modal_overlay");
+const modalClose = document.querySelector(".modal_close_btn--bm0-1--br3");
+
+const actionModal = function () {
+  modalCoquille.classList.toggle("display-none");
+  if (modalCoquille.classList.contains("display-none")) {
+    document.body.style.overflow = "auto";
+  } else {
+    document.body.style.overflow = "hidden";
+  }
+};
+
+btnCoquille.addEventListener("click", actionModal);
+modalOverlay.addEventListener("click", actionModal);
+modalClose.addEventListener("click", actionModal);
